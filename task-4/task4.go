@@ -18,22 +18,13 @@ func main(){
 		fmt.Scanf("\n")
 	}
 
-	flag:= true
 	for i := 0; i < n; i++{
 		for j := 0; j < n; j++{
 			if(nums[i][j] != nums[n-1-i][n-1-j]){
-				flag = false
-				break
+				fmt.Printf("NO")
+				return
 			}
-		}
-		if !flag{
-			fmt.Printf("NO")
-			break
-		}
-		
-	}	
-	if flag{
-		fmt.Printf("YES")
+		}		
 	}
-
+	fmt.Printf("YES")
 }
